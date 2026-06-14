@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="5" fill="#C41E3A"/>
+  <!-- Large S — upper left -->
+  <text x="1" y="24" font-size="24" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" fill="white">S</text>
+  <!-- Diagonal slash -->
+  <line x1="21" y1="3" x2="13" y2="30" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Small S — lower right -->
+  <text x="14" y="30" font-size="17" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" fill="white">S</text>
+</svg>
