@@ -6,21 +6,10 @@ import Image from "next/image";
 import { motion, useInView, AnimatePresence, type Variants } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
 
-const categories = ["All", "1 Ply", "Hard", "Soft", "Premium", "Printed Logo"] as const;
+const categories = ["All", "Hard", "Soft", "Premium", "Printed Logo"] as const;
 type Category = (typeof categories)[number];
 
 const products = [
-  {
-    id: "1ply",
-    category: "1 Ply" as Category,
-    name: "1 Ply Tissue Paper",
-    tagline: "Economical Everyday",
-    desc: "Our 1 Ply Tissue is lightweight, reliable, and cost-effective. The ideal choice for high-volume commercial use. Perfect for public washrooms, offices, and environments that demand efficiency without sacrificing cleanliness.",
-    specs: ["Single-layer construction", "High absorbency", "Hygienic packaging", "Bulk-order friendly", "Economical choice"],
-    uses: ["Public washrooms", "Office spaces", "High-volume commercial"],
-    image: "/1-ply.webp",
-    price: 10,
-  },
   {
     id: "hard",
     category: "Hard" as Category,
@@ -30,7 +19,6 @@ const products = [
     specs: ["Reinforced fibre structure", "Tear-resistant", "Moisture-absorbing", "Commercial grade", "Consistent quality"],
     uses: ["Restaurants", "Hotel kitchens", "Catering services"],
     image: "/white-hard-tissue.webp",
-    price: 12,
   },
   {
     id: "soft",
@@ -41,7 +29,6 @@ const products = [
     specs: ["Ultra-soft fibres", "Skin-friendly", "Gentle on sensitive skin", "Premium softness", "Elegant finish"],
     uses: ["Homes", "Boutique hotels", "Premium dining"],
     image: "/soft-plain-white.jpg",
-    price: 16,
   },
   {
     id: "premium",
@@ -52,7 +39,6 @@ const products = [
     specs: ["Multi-ply construction", "Feather-soft texture", "Extra thick", "Superior absorbency", "Luxury finish"],
     uses: ["5-star hotels", "Fine dining", "Executive suites"],
     image: "/tissue-premium.webp",
-    price: 25,
   },
   {
     id: "printed",
@@ -63,7 +49,6 @@ const products = [
     specs: ["Custom logo printing", "Full-colour design", "Premium base tissue", "Minimum MOQ", "Brand-aligned packaging"],
     uses: ["Corporate events", "Fine dining", "Brand marketing"],
     image: "/customized-logo-printed-tissue.png",
-    price: 30,
   },
 ];
 
@@ -129,7 +114,7 @@ export default function ProductsPage() {
             initial={{ opacity: 0 }} animate={{ opacity: 1 }}
             transition={{ duration: 0.9, delay: 0.9 }}
           >
-            Five product lines engineered for different needs, from daily utility
+            Four product lines engineered for different needs, from daily utility
             to custom-branded luxury.
           </motion.p>
         </div>
@@ -216,19 +201,9 @@ export default function ProductsPage() {
                       <p className="font-inter text-[9px] tracking-[0.35em] uppercase mb-2" style={{ color: "#C41E3A" }}>
                         {product.tagline}
                       </p>
-                      <div className="flex items-baseline justify-between mb-4 gap-4 flex-wrap">
-                        <h3 className="font-playfair font-700 leading-tight" style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", color: "#F5F0E8" }}>
-                          {product.name}
-                        </h3>
-                        <div className="flex items-baseline gap-1.5 shrink-0">
-                          <span className="font-playfair font-700" style={{ fontSize: "1.75rem", color: "#C41E3A" }}>
-                            ₹{product.price}
-                          </span>
-                          <span className="font-inter text-[10px] tracking-[0.15em] uppercase" style={{ color: "#6B6B6B" }}>
-                            / pack
-                          </span>
-                        </div>
-                      </div>
+                      <h3 className="font-playfair font-700 leading-tight mb-4" style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", color: "#F5F0E8" }}>
+                        {product.name}
+                      </h3>
                       <p className="font-inter text-sm leading-7 mb-6" style={{ color: "#6B6B6B" }}>
                         {product.desc}
                       </p>

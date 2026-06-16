@@ -26,20 +26,11 @@ const stagger: Variants = {
 /* ─── Product data ─── */
 const products = [
   {
-    id: "1ply",
-    name: "1 Ply Tissue",
-    tagline: "Economical Everyday",
-    desc: "Lightweight and cost-effective tissue for everyday use. Ideal for high-volume commercial environments.",
-    image: "/1-ply.webp",
-    price: 10,
-  },
-  {
     id: "hard",
     name: "Hard Tissue",
     tagline: "Industrial Strength",
     desc: "Durable, heavy-duty tissue engineered for restaurants, hotels, and commercial spaces demanding longevity.",
     image: "/white-hard-tissue.webp",
-    price: 12,
   },
   {
     id: "soft",
@@ -47,7 +38,6 @@ const products = [
     tagline: "Gentle Comfort",
     desc: "Ultra-soft, skin-friendly tissue crafted from premium fibres. Perfect for homes and premium hospitality.",
     image: "/soft-plain-white.jpg",
-    price: 16,
   },
   {
     id: "premium",
@@ -55,7 +45,6 @@ const products = [
     tagline: "Pure Luxury",
     desc: "The finest tissue in our collection. Feather-soft, thick, and opulently smooth for discerning clients.",
     image: "/tissue-premium.webp",
-    price: 25,
   },
   {
     id: "printed",
@@ -63,7 +52,6 @@ const products = [
     tagline: "Your Brand, Elevated",
     desc: "Custom-printed tissues with your business logo or design. Turn every table into a branding moment.",
     image: "/customized-logo-printed-tissue.png",
-    price: 30,
   },
 ];
 
@@ -290,7 +278,7 @@ function ProductsSection() {
             Crafted for Every Need
           </motion.h2>
           <motion.p variants={fadeUp} className="font-inter text-sm leading-7 max-w-md" style={{ color: "#6B6B6B" }}>
-            Five distinct tissue lines, each perfected for specific environments and requirements, from economical to ultra-premium.
+            Four distinct tissue lines, each perfected for specific environments and requirements, from everyday to ultra-premium.
           </motion.p>
         </motion.div>
 
@@ -298,11 +286,11 @@ function ProductsSection() {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
           variants={stagger} initial="hidden" animate={inView ? "show" : "hidden"}
         >
-          {products.map((product, i) => (
+          {products.map((product) => (
             <motion.div
               key={product.id}
               variants={fadeUp}
-              className={`group glass-card overflow-hidden transition-all duration-500 cursor-pointer ${i === 4 ? "sm:col-span-2 lg:col-span-1" : ""}`}
+              className="group glass-card overflow-hidden transition-all duration-500 cursor-pointer"
               whileHover={{ y: -6, boxShadow: "0 0 40px rgba(196,30,58,0.12), 0 0 80px rgba(196,30,58,0.04)" }}
             >
               {/* Product image */}
@@ -325,15 +313,9 @@ function ProductsSection() {
                 <p className="font-inter text-[9px] tracking-[0.35em] uppercase mb-2" style={{ color: "#C41E3A" }}>
                   {product.tagline}
                 </p>
-                <div className="flex items-baseline justify-between mb-3">
-                  <h3 className="font-playfair text-2xl font-600" style={{ color: "#F5F0E8" }}>
-                    {product.name}
-                  </h3>
-                  <span className="font-playfair text-xl font-700 shrink-0 ml-3" style={{ color: "#C41E3A" }}>
-                    ₹{product.price}
-                    <span className="font-inter text-[10px] font-400 tracking-[0.1em] ml-1" style={{ color: "#6B6B6B" }}>/pack</span>
-                  </span>
-                </div>
+                <h3 className="font-playfair text-2xl font-600 mb-3" style={{ color: "#F5F0E8" }}>
+                  {product.name}
+                </h3>
                 <p className="font-inter text-sm leading-6" style={{ color: "#6B6B6B" }}>
                   {product.desc}
                 </p>
@@ -387,7 +369,7 @@ function AboutSection() {
 
   const stats = [
     { value: "2024", label: "Founded" },
-    { value: "5+", label: "Product Lines" },
+    { value: "4+", label: "Product Lines" },
     { value: "100+", label: "Happy Clients" },
   ];
 
@@ -420,7 +402,7 @@ function AboutSection() {
                 Sri Sahasra Enterprises was born from a student&apos;s dream. A young entrepreneur passionate about building something real, something that serves people every single day. With blood, sweat, and relentless dedication, the founder turned an idea into a trusted tissue brand serving Hyderabad.
               </p>
               <p className="font-inter text-sm leading-8" style={{ color: "#6B6B6B" }}>
-                What began as a bold bet on quality has grown into a range of five premium tissue lines serving homes, hotels, restaurants, and businesses. Every roll we deliver carries the same promise: purity, softness, and excellence.
+                What began as a bold bet on quality has grown into a range of four premium tissue lines serving homes, hotels, restaurants, and businesses. Every roll we deliver carries the same promise: purity, softness, and excellence.
               </p>
             </motion.div>
             <motion.div variants={fadeUp} className="mt-10">

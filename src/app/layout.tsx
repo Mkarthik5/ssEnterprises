@@ -23,12 +23,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Sri Sahasra Enterprises: Premium Tissue Products",
   description:
-    "Sri Sahasra Enterprises. Premium quality tissue solutions for homes, restaurants, hotels, and businesses in Hyderabad, Telangana. 1 Ply, Soft, Hard, Premium & Printed Logo tissues.",
+    "Sri Sahasra Enterprises. Premium quality tissue solutions for homes, restaurants, hotels, and businesses in Hyderabad, Telangana. Soft, Hard, Premium & Printed Logo tissues.",
   keywords: [
     "tissue paper",
     "soft tissue",
     "hard tissue",
-    "1 ply tissue",
     "premium tissue",
     "printed logo tissue",
     "Hyderabad",

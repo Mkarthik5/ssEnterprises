@@ -11,7 +11,6 @@ const footerLinks = {
     { label: "Contact", href: "/contact" },
   ],
   Products: [
-    { label: "1 Ply Tissue", href: "/products#1ply" },
     { label: "Hard Tissue", href: "/products#hard" },
     { label: "Soft Tissue", href: "/products#soft" },
     { label: "Premium Tissue", href: "/products#premium" },
